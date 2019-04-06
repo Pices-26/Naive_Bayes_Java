@@ -30,8 +30,8 @@ public class frame2 {
 		f.getContentPane().setLayout(null);
 		
 		//title on top
-		JLabel lblTitle = new JLabel("Title");
-		lblTitle.setBounds(341, 32, 82, 23);
+		JLabel lblTitle = new JLabel("Tonsillitis Checker");
+		lblTitle.setBounds(286, 30, 167, 23);
 		f.getContentPane().add(lblTitle);
 		
 		
@@ -78,9 +78,20 @@ public class frame2 {
 				Object cont_st = stbox.getSelectedItem();
 				Object cont_ache = achebox.getSelectedItem();
 				Object cont_temp = tempbox.getSelectedItem();
-				Calculation c = new Calculation(cont_temp, cont_ache,cont_st);
+				// caling a method in another class
+				Calculation c = new Calculation();
+				float result = c.Calculation(cont_temp, cont_ache, cont_st);
+				// percentage result in console
+				System.out.println(result);
+				if(result > 50.00)
+				{
+					JOptionPane.showMessageDialog(null, "More than 50% chance of having Tonsillitis");
+				}
+				else
+				{
+					JOptionPane.showMessageDialog(null, "Less than 50% chance of having Tonsillitis");
+				}
 			}
-			
 		});
 		
 	}

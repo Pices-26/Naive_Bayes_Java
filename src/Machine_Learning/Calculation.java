@@ -23,7 +23,7 @@ public class Calculation {
 	public Object cont_st;
 	
 	
-	public Calculation(Object cont_temp, Object cont_ache, Object cont_st)
+	public float Calculation(Object cont_temp, Object cont_ache, Object cont_st)
 	{
 		this.cont_temp = cont_temp;
 		this.cont_ache = cont_ache;
@@ -133,8 +133,8 @@ public class Calculation {
 		
 		float result = vartemp * varache * varst;
 		result = result * 100;
-		System.out.println(result + "%");
-		//return result;
+		//System.out.println(result + "%");
+		return result;
 		
 	}
 }
