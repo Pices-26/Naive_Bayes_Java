@@ -133,7 +133,6 @@ public class Calculation {
 		
 		float result = vartemp * varache * varst;
 		result = result * 100;
-		//System.out.println(result + "%");
 		return result;
 		
 	}

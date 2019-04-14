@@ -54,6 +54,7 @@ public class frame2 {
 		JButton btnCheck = new JButton("Check");
 		btnCheck.setBounds(298, 360, 131, 31);
 		
+		//creating optoins for user to select
 		f.getContentPane().add(btnCheck);
 		JComboBox tempbox = new JComboBox();
 		tempbox.setBounds(492, 106, 128, 29);
@@ -67,7 +68,7 @@ public class frame2 {
 		achebox.addItem("Yes");
 		achebox.addItem("No");
 		JComboBox stbox = new JComboBox();
-		stbox.setBounds(492, 276, 122, 29);
+		stbox.setBounds(492, 276, 128, 29);
 		f.getContentPane().add(stbox);
 		stbox.addItem("Yes");
 		stbox.addItem("No");
@@ -83,6 +84,7 @@ public class frame2 {
 				float result = c.Calculation(cont_temp, cont_ache, cont_st);
 				// percentage result in console
 				System.out.println(result);
+				//result for user
 				if(result > 50.00)
 				{
 					JOptionPane.showMessageDialog(null, "More than 50% chance of having Tonsillitis");
